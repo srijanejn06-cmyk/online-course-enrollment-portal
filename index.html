@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Enroll in a LearnHub online course with a quick, secure enrollment form."
+    />
+    <title>Online Course Enrollment Portal | LearnHub</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/validation.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="LearnHub home">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span class="brand-name">Learn<span>Hub</span></span>
+      </a>
+      <span class="header-caption">Online Course Enrollment Portal</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="eyebrow">Your next chapter starts here</p>
+          <h1 id="page-title">Enroll in Your Next Course</h1>
+          <p class="hero-description">
+            Complete the enrollment form below to register for your selected online course.
+          </p>
+        </div>
+        <div class="hero-note" aria-label="LearnHub learning benefits">
+          <span class="note-icon" aria-hidden="true">✦</span>
+          <span>Learn at your pace.<br /><strong>Grow with confidence.</strong></span>
+        </div>
+      </section>
+
+      <section class="enrollment-card" aria-labelledby="form-heading">
+        <div class="card-heading">
+          <div>
+            <p class="section-kicker">Course registration</p>
+            <h2 id="form-heading">Student Enrollment Form</h2>
+          </div>
+          <span class="required-note"><span aria-hidden="true">*</span> Required fields</span>
+        </div>
+
+        <form id="enrollmentForm" novalidate>
+          <section class="form-section" aria-labelledby="personal-heading">
+            <div class="form-section-heading">
+              <span class="section-number" aria-hidden="true">01</span>
+              <div>
+                <h3 id="personal-heading">Personal Information</h3>
+                <p>Tell us a little about yourself.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="fullName">Full Name <span>*</span></label>
+                <input id="fullName" name="fullName" type="text" placeholder="e.g. Aditi Sharma" autocomplete="name" aria-describedby="fullNameError" />
+                <small id="fullNameError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="emailError" />
+                <small id="emailError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="phoneNumber">Phone Number <span>*</span></label>
+                <input id="phoneNumber" name="phoneNumber" type="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" autocomplete="tel" aria-describedby="phoneNumberError" />
+                <small id="phoneNumberError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="dob">Date of Birth <span>*</span></label>
+                <input id="dob" name="dob" type="date" autocomplete="bday" aria-describedby="dobError" />
+                <small id="dobError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="gender">Gender <span>*</span></label>
+                <select id="gender" name="gender" aria-describedby="genderError">
+                  <option value="">Select your gender</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="non-binary">Non-binary</option>
+                  <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+                <small id="genderError" class="error-message" aria-live="polite"></small>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="course-heading">
+            <div class="form-section-heading">
+              <span class="section-number" aria-hidden="true">02</span>
+              <div>
+                <h3 id="course-heading">Course Information</h3>
+                <p>Choose the course and learning approach that suit you.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="course">Course Selection <span>*</span></label>
+                <select id="course" name="course" aria-describedby="courseError">
+                  <option value="">Choose a course</option>
+                  <option value="Full Stack Web Development">Full Stack Web Development</option>
+                  <option value="Python Programming">Python Programming</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="Artificial Intelligence">Artificial Intelligence</option>
+                  <option value="Machine Learning">Machine Learning</option>
+                  <option value="Cloud Computing">Cloud Computing</option>
+                  <option value="Cyber Security">Cyber Security</option>
+                  <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+                <small id="courseError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="education">Education / Qualification <span>*</span></label>
+                <select id="education" name="education" aria-describedby="educationError">
+                  <option value="">Select your qualification</option>
+                  <option value="School Student">School Student</option>
+                  <option value="Diploma">Diploma</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
+                  <option value="Working Professional">Working Professional</option>
+                  <option value="Other">Other</option>
+                </select>
+                <small id="educationError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="preferredTime">Preferred Learning Time <span>*</span></label>
+                <select id="preferredTime" name="preferredTime" aria-describedby="preferredTimeError">
+                  <option value="">Choose a preferred time</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+                <small id="preferredTimeError" class="error-message" aria-live="polite"></small>
+              </div>
+              <fieldset class="field-group choice-group" id="learningModeGroup" aria-describedby="learningModeError">
+                <legend>Learning Mode <span>*</span></legend>
+                <div class="choice-options">
+                  <label class="choice-card" for="onlineLive">
+                    <input id="onlineLive" name="learningMode" type="radio" value="Online Live Classes" />
+                    <span class="choice-indicator" aria-hidden="true"></span>
+                    <span class="choice-copy"><strong>Online Live Classes</strong><small>Learn with instructors in real time</small></span>
+                  </label>
+                  <label class="choice-card" for="selfPaced">
+                    <input id="selfPaced" name="learningMode" type="radio" value="Self-Paced Learning" />
+                    <span class="choice-indicator" aria-hidden="true"></span>
+                    <span class="choice-copy"><strong>Self-Paced Learning</strong><small>Study on your own schedule</small></span>
+                  </label>
+                </div>
+                <small id="learningModeError" class="error-message" aria-live="polite"></small>
+              </fieldset>
+            </div>
+          </section>
+
+          <section class="form-section" aria-labelledby="account-heading">
+            <div class="form-section-heading">
+              <span class="section-number" aria-hidden="true">03</span>
+              <div>
+                <h3 id="account-heading">Account &amp; Contact Information</h3>
+                <p>Set up your enrollment details and contact address.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="password">Password <span>*</span></label>
+                <input id="password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" aria-describedby="passwordHint passwordError" />
+                <small id="passwordHint" class="field-hint">Include uppercase and lowercase letters, plus a number.</small>
+                <small id="passwordError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="confirmPassword">Confirm Password <span>*</span></label>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Enter your password again" autocomplete="new-password" aria-describedby="confirmPasswordError" />
+                <small id="confirmPasswordError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group full-width">
+                <label for="address">Address <span>*</span></label>
+                <textarea id="address" name="address" rows="3" placeholder="Enter your residential address" autocomplete="street-address" aria-describedby="addressError"></textarea>
+                <small id="addressError" class="error-message" aria-live="polite"></small>
+              </div>
+              <div class="field-group">
+                <label for="pinCode">PIN Code <span>*</span></label>
+                <input id="pinCode" name="pinCode" type="text" inputmode="numeric" maxlength="6" placeholder="6-digit PIN code" autocomplete="postal-code" aria-describedby="pinCodeError" />
+                <small id="pinCodeError" class="error-message" aria-live="polite"></small>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section confirmation-section" aria-labelledby="confirmation-heading">
+            <div class="form-section-heading">
+              <span class="section-number" aria-hidden="true">04</span>
+              <div>
+                <h3 id="confirmation-heading">Confirmation</h3>
+                <p>Review your details and confirm to complete enrollment.</p>
+              </div>
+            </div>
+
+            <div class="checkbox-field">
+              <label class="checkbox-wrap" for="terms">
+                <input id="terms" name="terms" type="checkbox" aria-describedby="termsError" />
+                <span>I agree to the Terms and Conditions and confirm that the information provided is accurate.</span>
+              </label>
+              <small id="termsError" class="error-message" aria-live="polite"></small>
+            </div>
+            <div class="button-row">
+              <button type="submit" class="btn btn-primary">Enroll Now <span aria-hidden="true">→</span></button>
+              <button type="reset" class="btn btn-secondary" id="resetButton">Clear Form</button>
+            </div>
+          </section>
+        </form>
+
+        <section id="successMessage" class="success-message" aria-live="polite" aria-labelledby="successHeading" hidden>
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <div class="success-content">
+            <p class="section-kicker">You’re on your way</p>
+            <h2 id="successHeading">Enrollment Successful!</h2>
+            <p>You have successfully enrolled in your selected course.</p>
+            <dl id="enrollmentSummary" class="success-summary"></dl>
+          </div>
+        </section>
+      </section>
+      <p class="page-footer">LearnHub · Learn something new, every day.</p>
+    </main>
+  </body>
+</html>
